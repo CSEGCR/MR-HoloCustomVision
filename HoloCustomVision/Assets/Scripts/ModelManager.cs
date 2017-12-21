@@ -201,7 +201,7 @@ public class ModelManager : Singleton<ModelManager> {
     public void SetResult(string text)
     {
         resultCanvas.SetActive(true);
-        resultCanvas.transform.FindChild("Text").GetComponent<Text>().text = text;
+        resultCanvas.transform.Find("Text").GetComponent<Text>().text = text;
     }
 
     /// <summary>

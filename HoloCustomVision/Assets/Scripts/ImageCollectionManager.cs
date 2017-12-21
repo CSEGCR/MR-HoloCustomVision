@@ -116,7 +116,7 @@ public class ImageCollectionManager : Singleton<ImageCollectionManager>
         Sprite sprite = Sprite.Create(targetTexture, new Rect(0, 0, targetTexture.width, targetTexture.height), new Vector2(0.5f, 0.5f));
         
         imageTransform.gameObject.SetActive(true);
-        imageTransform.FindChild("Image").GetComponent<Image>().sprite = sprite;
+        imageTransform.Find("Image").GetComponent<Image>().sprite = sprite;
     }
 
     /// <summary>

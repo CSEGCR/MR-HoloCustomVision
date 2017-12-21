@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloCustomVision", "HoloCustomVision.csproj", "{F146EDBA-52D8-F28B-2216-BDE58F703973}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoloCustomVision.Editor", "HoloCustomVision.Editor.csproj", "{81ACF991-5717-A667-6C1C-F7D16C33297F}"
