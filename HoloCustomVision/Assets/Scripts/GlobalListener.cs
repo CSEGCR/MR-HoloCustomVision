@@ -30,7 +30,8 @@ public class GlobalListener : MonoBehaviour,IInputClickHandler, ISourceStateHand
             ModelManager.Instance.SetCropBoxActive(false);
             ModelManager.Instance.HideResult();
             ToolManager.Instance.HideMenu();
-            ModelManager.Instance.SetTipText("点击进行拍照");
+            //ModelManager.Instance.SetTipText("点击进行拍照"); //changed by yimei
+            ModelManager.Instance.SetTipText("点击进行拍照\nAirtap for taking picture");
             ModelManager.Instance.PlayAnimation("IdleAnimation");
         }
     }

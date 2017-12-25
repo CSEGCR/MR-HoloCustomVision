@@ -105,7 +105,8 @@ public class CapturePhotoManager : Singleton<CapturePhotoManager> {
         }
         else
         {
-            ModelManager.Instance.SetTipText("点击进行拍照");
+            //ModelManager.Instance.SetTipText("点击进行拍照"); //changed by yimei
+            ModelManager.Instance.SetTipText("点击进行拍照\nAirtap for taking picture");
             ModelManager.Instance.SetWaitingCanvas(false);
             currentStatus = CurrentStatus.Ready;
             ModelManager.Instance.SetPhotoImageActive(false);
@@ -159,7 +160,8 @@ public class CapturePhotoManager : Singleton<CapturePhotoManager> {
             audioSource.Play();
 
             currentStatus = CurrentStatus.Ready;
-            ModelManager.Instance.SetTipText("点击进行拍照");
+            //ModelManager.Instance.SetTipText("点击进行拍照"); //changed by yimei
+            ModelManager.Instance.SetTipText("点击进行拍照\nAirtap for taking picture");
             ModelManager.Instance.PlayAnimation("IdleAnimation");
         }
         photoCaptureObject.StopPhotoModeAsync(OnStoppedPhotoMode);
