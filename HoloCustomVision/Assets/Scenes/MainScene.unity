@@ -6758,8 +6758,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -257}
-  m_SizeDelta: {x: 550, y: 200}
+  m_AnchoredPosition: {x: 0, y: -248}
+  m_SizeDelta: {x: 550, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945481495
 MonoBehaviour:
@@ -6782,7 +6782,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -6793,7 +6793,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E09\u79D2\u540E\u5F00\u59CB\u62CD\u6444\uFF0C\u8BF7\u5C3D\u5FEB\u8BA9\u753B\u50CF\u51FA\u73B0\u5728\u6B63\u524D\u65B9\uFF0C\u5E76\u4FDD\u6301\u4E0D\u52A8"
+  m_Text: "\u4E09\u79D2\u540E\u5F00\u59CB\u62CD\u6444\uFF0C\u8BF7\u5C3D\u5FEB\u8BA9\u753B\u50CF\u51FA\u73B0\u5728\u6B63\u524D\u65B9\uFF0C\u5E76\u4FDD\u6301\u4E0D\u52A8\nPicture
+    will be taken in 3 seconds. Please gaze at the object and keep still."
 --- !u!222 &1945481496
 CanvasRenderer:
   m_ObjectHideFlags: 0
