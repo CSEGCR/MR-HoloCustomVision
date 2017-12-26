@@ -366,7 +366,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 71342874}
   m_LocalRotation: {x: -0.04231069, y: -0.09064181, z: -0.0038544782, w: 0.99497694}
-  m_LocalPosition: {x: 0, y: 0, z: 2.0068}
+  m_LocalPosition: {x: 0, y: 0, z: 2.00179}
   m_LocalScale: {x: 0.002, y: 0.002, z: 1}
   m_Children:
   - {fileID: 2119060953}
@@ -375,9 +375,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -4.8700004, y: -10.410001, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0191, y: 0.29499996}
-  m_SizeDelta: {x: 600, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.018179584, y: 0.35478127}
+  m_SizeDelta: {x: 600, y: 80}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &71342876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2934,7 +2934,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2945,7 +2945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B63\u5728\u641C\u7D22\u4E2D..."
+  m_Text: "\u6B63\u5728\u641C\u7D22\u4E2D...\nIn the searching..."
 --- !u!222 &918429914
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7394,7 +7394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000009536743}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119060954
@@ -7490,7 +7490,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0062ea3bb534cd142b84d08790b6301e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61fabd10a9208974dbb9703ef90fb23f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

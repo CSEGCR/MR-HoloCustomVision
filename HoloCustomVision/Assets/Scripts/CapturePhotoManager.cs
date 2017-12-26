@@ -106,7 +106,7 @@ public class CapturePhotoManager : Singleton<CapturePhotoManager> {
         else
         {
             //ModelManager.Instance.SetTipText("点击进行拍照"); //changed by yimei
-            ModelManager.Instance.SetTipText("点击进行拍照\nAirtap for taking picture");
+            ModelManager.Instance.SetTipText("点击进行拍照\r\nAirtap for taking picture");
             ModelManager.Instance.SetWaitingCanvas(false);
             currentStatus = CurrentStatus.Ready;
             ModelManager.Instance.SetPhotoImageActive(false);
@@ -129,7 +129,8 @@ public class CapturePhotoManager : Singleton<CapturePhotoManager> {
 
             ModelManager.Instance.SetPhotoImageActive(true);
             ModelManager.Instance.SetWaitingCanvas(false);
-            ModelManager.Instance.SetTipText("正在处理中...");
+            //ModelManager.Instance.SetTipText("正在处理中..."); //changed by yimei
+            ModelManager.Instance.SetTipText("正在处理中...\r\nIn processing...");
             if (ConfigurationManager.Instance.GetMode() == CurrentMode.EdittingMode)
             {
                 ToolManager.Instance.ShowMenu();
@@ -161,7 +162,7 @@ public class CapturePhotoManager : Singleton<CapturePhotoManager> {
 
             currentStatus = CurrentStatus.Ready;
             //ModelManager.Instance.SetTipText("点击进行拍照"); //changed by yimei
-            ModelManager.Instance.SetTipText("点击进行拍照\nAirtap for taking picture");
+            ModelManager.Instance.SetTipText("点击进行拍照\r\nAirtap for taking picture");
             ModelManager.Instance.PlayAnimation("IdleAnimation");
         }
         photoCaptureObject.StopPhotoModeAsync(OnStoppedPhotoMode);
@@ -292,7 +293,8 @@ public class CapturePhotoManager : Singleton<CapturePhotoManager> {
         ModelManager.Instance.PlayAnimation("ResultAnimation");
         byte[] imageData = texture.EncodeToPNG();
         currentStatus = CurrentStatus.AnalyzingPhoto;
-        ModelManager.Instance.SetTipText("正在分析中…");
+        //ModelManager.Instance.SetTipText("正在分析中…"); //changed by yimei
+        ModelManager.Instance.SetTipText("正在分析中…\r\nIn analyzing...");
         string predictionUrl = string.Format(hostUrl, ConfigurationManager.Instance.GetProjectId());
         string predictionKey = ConfigurationManager.Instance.GetPredictionKey();
         string contentType = @"application/octet-stream";
@@ -323,13 +325,25 @@ public class CapturePhotoManager : Singleton<CapturePhotoManager> {
 
         if (tagName == "对不起，无法识别")
         {
-            ModelManager.Instance.SetTipText("识别结果：" + tagName + ((probability >= probabilityThreshold) ? "\r\n可能性：" + Math.Round(probability, 3) * 100 + "%" : ""));
+            //changed by yimei
+            //ModelManager.Instance.SetTipText("识别结果：" + tagName + ((probability >= probabilityThreshold) ? "\r\n可能性：" + Math.Round(probability, 3) * 100 + "%" : ""));
+            string s = "";
+            s += "识别结果：" + tagName + ((probability >= probabilityThreshold) ? "\r\n可能性：" + Math.Round(probability, 3) * 100 + "%" : "");
+            s += "\r\n";
+            s += "Result：" + "recognition  fail" + ((probability >= probabilityThreshold) ? "\r\nPossibility：" + Math.Round(probability, 3) * 100 + "%" : "");
+            ModelManager.Instance.SetTipText(s);
             currentStatus = CurrentStatus.Ready;
         }
         else
         {
             ModelManager.Instance.SetTipText("");
-            ModelManager.Instance.SetResult("识别结果：" + tagName + ((probability >= probabilityThreshold) ? "\r\n可能性：" + Math.Round(probability, 3) * 100 + "%" : "") + "\r\n该画家相关作品：");
+            //changed by yimei
+            //ModelManager.Instance.SetResult("识别结果：" + tagName + ((probability >= probabilityThreshold) ? "\r\n可能性：" + Math.Round(probability, 3) * 100 + "%" : "") + "\r\n该画家相关作品：");
+            string s = "";
+            s += "识别结果：" + tagName + ((probability >= probabilityThreshold) ? "\r\n可能性：" + Math.Round(probability, 3) * 100 + "%" : "") + "\r\n该画家相关作品：";
+            s += "\r\n";
+            s += "Result：" + tagName + ((probability >= probabilityThreshold) ? "\r\nPossibility：" + Math.Round(probability, 3) * 100 + "%" : "") + "\r\nThe Painter's work：";
+            ModelManager.Instance.SetResult(s);
             ModelManager.Instance.SetWaitingSearch(true);
             currentStatus = CurrentStatus.Searching;
             StartCoroutine(ImageCollectionManager.Instance.SearchImages(ParseTagName(tagName)));

@@ -70,7 +70,7 @@ public class Button : MonoBehaviour,IFocusable,IInputClickHandler {
                 ModelManager.Instance.SetPhotoImageActive(false);
                 ModelManager.Instance.SetCropBoxActive(false);
                 //ModelManager.Instance.SetTipText("点击进行拍照"); //changed by yimei
-                ModelManager.Instance.SetTipText("点击进行拍照\nAirtap for taking picture");
+                ModelManager.Instance.SetTipText("点击进行拍照\r\nAirtap for taking picture");
                 ModelManager.Instance.PlayAnimation("IdleAnimation");
                 CapturePhotoManager.Instance.SetCurrentStatus(CurrentStatus.Ready);
                 break;
